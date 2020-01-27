@@ -14,6 +14,7 @@
 		889218E623DDE894007D082B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889218E523DDE894007D082B /* Assets.xcassets */; };
 		889218E923DDE894007D082B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889218E823DDE894007D082B /* Preview Assets.xcassets */; };
 		889218EC23DDE894007D082B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 889218EA23DDE894007D082B /* LaunchScreen.storyboard */; };
+		889218F423DDE9B0007D082B /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889218F323DDE9B0007D082B /* Beer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,12 @@
 		889218DC23DDE891007D082B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889218DE23DDE891007D082B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		889218E123DDE891007D082B /* BeerUp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeerUp.xcdatamodel; sourceTree = "<group>"; };
-		889218E323DDE891007D082B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		889218E323DDE891007D082B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		889218E523DDE894007D082B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		889218E823DDE894007D082B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		889218EB23DDE894007D082B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		889218ED23DDE894007D082B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		889218F323DDE9B0007D082B /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				889218E523DDE894007D082B /* Assets.xcassets */,
 				889218EA23DDE894007D082B /* LaunchScreen.storyboard */,
 				889218ED23DDE894007D082B /* Info.plist */,
+				889218F523DDE9ED007D082B /* Model */,
 				889218E023DDE891007D082B /* BeerUp.xcdatamodeld */,
 				889218E723DDE894007D082B /* Preview Content */,
 			);
@@ -76,6 +79,14 @@
 				889218E823DDE894007D082B /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		889218F523DDE9ED007D082B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				889218F323DDE9B0007D082B /* Beer.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,6 +162,7 @@
 			files = (
 				889218E223DDE891007D082B /* BeerUp.xcdatamodeld in Sources */,
 				889218DD23DDE891007D082B /* AppDelegate.swift in Sources */,
+				889218F423DDE9B0007D082B /* Beer.swift in Sources */,
 				889218E423DDE891007D082B /* ContentView.swift in Sources */,
 				889218DF23DDE891007D082B /* SceneDelegate.swift in Sources */,
 			);
@@ -300,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.torburg.BeerUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.torburg.BeerUp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
