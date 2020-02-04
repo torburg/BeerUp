@@ -26,14 +26,14 @@ struct Beer: Identifiable {
 }
 
 #if DEBUG
-let testData = {
-    return countBeer()
-}
-func countBeer() -> [Beer] {
-    var beers = [Beer]()
-    for i in 1...10 {
-        beers.append(Beer(bid: i, beerName: "\(i) Guiness Please"))
-    }
-    return beers
-}
+//let testData = {
+//    return generateBeers()
+//}
+//func generateBeers() -> [Beer] {
+//    var beers = [Beer]()
+//    for i in 1...10 {
+//        beers.append(Beer(bid: i, beerName: "\(i) Guiness Please"))
+//    }
+//    return beers
+//}
 #endif

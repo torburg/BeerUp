@@ -23,9 +23,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
-        // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
-        let contentView = ContentView().environment(\.managedObjectContext, context)
-
+//         Add `@Environment(\.managedObjectContext)` in the views that will need the context.
+//        let contentView = ContentView().environment(\.managedObjectContext, context)
+        let contentView = MainView().environment(\.managedObjectContext, context)
+//        let authorized = false
+//        if !authorized {
+//            contentView = ContentView().environment(\.managedObjectContext, context)
+//        }
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
