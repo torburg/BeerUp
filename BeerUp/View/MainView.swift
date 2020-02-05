@@ -48,17 +48,14 @@ struct MainView: View {
                     }
                 }
                 List {
-                    ForEach(beers.items) { beer in
+                    ForEach(beers.items) { item in
                         HStack{
-                            Image("beer")
-                                .resizable()
-                                .frame(width: 50,
-                                       height: 50,
-                                       alignment: .center)
-                                .clipShape(Circle())
+                            // FIXME: - Check image downloading
+                            UrlImage(withURL: item.beer.label)
+//                            Image("beer")
                             VStack(alignment: .leading) {
-                                Text("\(beer.beerName)").modifier(TextModifier())
-                                Text("\(beer.bid)")
+                                Text("\(item.beer.name)").modifier(TextModifier())
+                                Text("\(item.brewery.name)")
                                     .font(.subheadline)
                                     .foregroundColor(Color.gray)
                             }
@@ -82,8 +79,8 @@ struct TextModifier: ViewModifier {
     func body(content: Content) -> some View {
         content
             .font(Font.custom("Arial Rounded MT Bold", size: 18))
-            .foregroundColor(Color.white)
-            .modifier(Shadow())
+//            .foregroundColor(Color.white)
+//            .modifier(Shadow())
     }
 }
 

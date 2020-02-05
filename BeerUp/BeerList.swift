@@ -9,10 +9,12 @@
 import Foundation
 
 class BeerList: ObservableObject {
-    @Published var items: [Beer]
+    @Published var items: [Item]
+    let fetcher = BeerFetcher()
     
     init() {
-        items = generateBeers()
+        self.items = fetcher.items
+//        items = generateBeers()
     }
     
     func deleteItem(whichElement: IndexSet){
@@ -23,7 +25,7 @@ class BeerList: ObservableObject {
 fileprivate func generateBeers() -> [Beer] {
    var beers = [Beer]()
    for i in 1...10 {
-       beers.append(Beer(bid: i, beerName: "\(i) Guiness Please"))
+    beers.append(Beer(id: i, name: "\(i) Guiness Please", label: ""))
    }
    return beers
 }

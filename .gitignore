@@ -37,6 +37,8 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
+## AuthDatas
+BeerUp/AuthDataTorburg.plist
 
 ########### Mac OS X ###########
 # Mac OS X temporary files that should never be committed

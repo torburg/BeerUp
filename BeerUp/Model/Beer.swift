@@ -8,21 +8,16 @@
 
 import Foundation
 
-struct Beer: Identifiable {
-    var id = UUID()
+struct Beer: Codable, Identifiable {    
+    let id: Int
+    let name: String
+    let label: String
     
-    let bid: Int
-    let beerName: String
-//    let beerLabel: URL
-//    let beerAbv: Double
-//    let beerIbu: Int
-//    let beerSlug: String
-//    let beerStyle: String
-//    let beer_description: String
-//    let createdAt: Date
-//    let authRating: Double
-//    let wishList: Bool
-//    let ratingScore: Double
+    enum CodingKeys: String, CodingKey {
+        case id = "bid"
+        case name = "beer_name"
+        case label = "beer_label"
+    }
 }
 
 #if DEBUG
