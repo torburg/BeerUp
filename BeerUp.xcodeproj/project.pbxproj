@@ -11,9 +11,19 @@
 		887C053D23E9B5AC00F6D1F5 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C053C23E9B5AC00F6D1F5 /* Brewery.swift */; };
 		887C054123E9B6FA00F6D1F5 /* BeerFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C054023E9B6FA00F6D1F5 /* BeerFetcher.swift */; };
 		887C054323EA0F4A00F6D1F5 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C054223EA0F4A00F6D1F5 /* SearchResult.swift */; };
-		887C054523EAE79700F6D1F5 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C054423EAE79700F6D1F5 /* Item.swift */; };
 		887C054823EAEE7300F6D1F5 /* UrlImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C054723EAEE7300F6D1F5 /* UrlImage.swift */; };
 		887C054A23EAEF1200F6D1F5 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C054923EAEF1200F6D1F5 /* ImageLoader.swift */; };
+		887C055223EB75C000F6D1F5 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055123EB75C000F6D1F5 /* EndPointType.swift */; };
+		887C055423EB765300F6D1F5 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055323EB765300F6D1F5 /* HTTPMethod.swift */; };
+		887C055623EB76EC00F6D1F5 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055523EB76EC00F6D1F5 /* HTTPTask.swift */; };
+		887C055823EB77E400F6D1F5 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055723EB77E400F6D1F5 /* ParameterEncoding.swift */; };
+		887C055A23EB795000F6D1F5 /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055923EB795000F6D1F5 /* URLParameterEncoder.swift */; };
+		887C055C23EB7BFA00F6D1F5 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055B23EB7BFA00F6D1F5 /* JSONParameterEncoder.swift */; };
+		887C055E23EB7CBE00F6D1F5 /* NetworkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055D23EB7CBE00F6D1F5 /* NetworkRouter.swift */; };
+		887C056023EB7D8400F6D1F5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C055F23EB7D8400F6D1F5 /* Router.swift */; };
+		887C056223EB83BB00F6D1F5 /* UntappdEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C056123EB83BB00F6D1F5 /* UntappdEndPoint.swift */; };
+		887C056423EC084700F6D1F5 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C056323EC084700F6D1F5 /* NetworkManager.swift */; };
+		887C056623EC234E00F6D1F5 /* UntappdApiResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 887C056523EC234E00F6D1F5 /* UntappdApiResponse.swift */; };
 		889218DD23DDE891007D082B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889218DC23DDE891007D082B /* AppDelegate.swift */; };
 		889218DF23DDE891007D082B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889218DE23DDE891007D082B /* SceneDelegate.swift */; };
 		889218E223DDE891007D082B /* BeerUp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 889218E023DDE891007D082B /* BeerUp.xcdatamodeld */; };
@@ -32,9 +42,19 @@
 		887C053C23E9B5AC00F6D1F5 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
 		887C054023E9B6FA00F6D1F5 /* BeerFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerFetcher.swift; sourceTree = "<group>"; };
 		887C054223EA0F4A00F6D1F5 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
-		887C054423EAE79700F6D1F5 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		887C054723EAEE7300F6D1F5 /* UrlImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlImage.swift; sourceTree = "<group>"; };
 		887C054923EAEF1200F6D1F5 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		887C055123EB75C000F6D1F5 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
+		887C055323EB765300F6D1F5 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		887C055523EB76EC00F6D1F5 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		887C055723EB77E400F6D1F5 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		887C055923EB795000F6D1F5 /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		887C055B23EB7BFA00F6D1F5 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		887C055D23EB7CBE00F6D1F5 /* NetworkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRouter.swift; sourceTree = "<group>"; };
+		887C055F23EB7D8400F6D1F5 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		887C056123EB83BB00F6D1F5 /* UntappdEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UntappdEndPoint.swift; sourceTree = "<group>"; };
+		887C056323EC084700F6D1F5 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		887C056523EC234E00F6D1F5 /* UntappdApiResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UntappdApiResponse.swift; sourceTree = "<group>"; };
 		889218D923DDE891007D082B /* BeerUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeerUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		889218DC23DDE891007D082B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889218DE23DDE891007D082B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +92,10 @@
 		887C053F23E9B6B500F6D1F5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				887C055023EB758E00F6D1F5 /* Encoding */,
+				887C054F23EB758200F6D1F5 /* Service */,
+				887C054E23EB757A00F6D1F5 /* Manager */,
+				887C054D23EB756A00F6D1F5 /* EndPoint */,
 				887C054623EAED1400F6D1F5 /* Model */,
 				887C054023E9B6FA00F6D1F5 /* BeerFetcher.swift */,
 				887C054923EAEF1200F6D1F5 /* ImageLoader.swift */,
@@ -83,8 +107,47 @@
 			isa = PBXGroup;
 			children = (
 				887C054223EA0F4A00F6D1F5 /* SearchResult.swift */,
+				887C056523EC234E00F6D1F5 /* UntappdApiResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		887C054D23EB756A00F6D1F5 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				887C056123EB83BB00F6D1F5 /* UntappdEndPoint.swift */,
+			);
+			path = EndPoint;
+			sourceTree = "<group>";
+		};
+		887C054E23EB757A00F6D1F5 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				887C056323EC084700F6D1F5 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		887C054F23EB758200F6D1F5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				887C055123EB75C000F6D1F5 /* EndPointType.swift */,
+				887C055D23EB7CBE00F6D1F5 /* NetworkRouter.swift */,
+				887C055F23EB7D8400F6D1F5 /* Router.swift */,
+				887C055323EB765300F6D1F5 /* HTTPMethod.swift */,
+				887C055523EB76EC00F6D1F5 /* HTTPTask.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		887C055023EB758E00F6D1F5 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				887C055723EB77E400F6D1F5 /* ParameterEncoding.swift */,
+				887C055923EB795000F6D1F5 /* URLParameterEncoder.swift */,
+				887C055B23EB7BFA00F6D1F5 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 		889218D023DDE891007D082B = {
@@ -135,7 +198,6 @@
 			children = (
 				889218F323DDE9B0007D082B /* Beer.swift */,
 				887C053C23E9B5AC00F6D1F5 /* Brewery.swift */,
-				887C054423EAE79700F6D1F5 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,20 +285,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				887C056023EB7D8400F6D1F5 /* Router.swift in Sources */,
+				887C055C23EB7BFA00F6D1F5 /* JSONParameterEncoder.swift in Sources */,
+				887C055A23EB795000F6D1F5 /* URLParameterEncoder.swift in Sources */,
+				887C055823EB77E400F6D1F5 /* ParameterEncoding.swift in Sources */,
+				887C055623EB76EC00F6D1F5 /* HTTPTask.swift in Sources */,
 				887C054A23EAEF1200F6D1F5 /* ImageLoader.swift in Sources */,
+				887C056623EC234E00F6D1F5 /* UntappdApiResponse.swift in Sources */,
 				887C054323EA0F4A00F6D1F5 /* SearchResult.swift in Sources */,
 				887C054823EAEE7300F6D1F5 /* UrlImage.swift in Sources */,
 				889218E223DDE891007D082B /* BeerUp.xcdatamodeld in Sources */,
+				887C056223EB83BB00F6D1F5 /* UntappdEndPoint.swift in Sources */,
 				889218DD23DDE891007D082B /* AppDelegate.swift in Sources */,
 				889218F423DDE9B0007D082B /* Beer.swift in Sources */,
-				887C054523EAE79700F6D1F5 /* Item.swift in Sources */,
+				887C056423EC084700F6D1F5 /* NetworkManager.swift in Sources */,
 				889218FE23E0E417007D082B /* BeerList.swift in Sources */,
+				887C055223EB75C000F6D1F5 /* EndPointType.swift in Sources */,
 				887C053D23E9B5AC00F6D1F5 /* Brewery.swift in Sources */,
 				889218E423DDE891007D082B /* MainView.swift in Sources */,
 				889218FC23E0A8EC007D082B /* AuthorizeView.swift in Sources */,
+				887C055423EB765300F6D1F5 /* HTTPMethod.swift in Sources */,
 				887C054123E9B6FA00F6D1F5 /* BeerFetcher.swift in Sources */,
 				889218FA23DF6925007D082B /* AboutView.swift in Sources */,
 				889218DF23DDE891007D082B /* SceneDelegate.swift in Sources */,
+				887C055E23EB7CBE00F6D1F5 /* NetworkRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

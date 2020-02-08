@@ -11,7 +11,7 @@ import Foundation
 struct Brewery: Codable {
     let name: String
     
-    enum CodingKeys: String, CodingKey {
+    private enum BreweryCodingKeys: String, CodingKey {
         case name = "brewery_name"
     }
 }

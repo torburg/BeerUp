@@ -8,15 +8,14 @@
 
 import Foundation
 
-struct SearchResult: Codable {
+struct SearchResult: Decodable {
     let response: Response
 }
 
-struct Response: Codable {
+struct Response: Decodable {
     let beers: Beers
 }
 
-struct Beers: Codable {
-    let items: [Item]
-}
+
+
 

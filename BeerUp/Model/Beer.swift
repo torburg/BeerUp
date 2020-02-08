@@ -13,7 +13,7 @@ struct Beer: Codable, Identifiable {
     let name: String
     let label: String
     
-    enum CodingKeys: String, CodingKey {
+    private enum BeerCodingKeys: String, CodingKey {
         case id = "bid"
         case name = "beer_name"
         case label = "beer_label"

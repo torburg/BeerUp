@@ -9,8 +9,16 @@
 import SwiftUI
 
 struct MainView: View {
-    @ObservedObject var beers = BeerList()
+    @State var items = [Item]()
+
+//    var beers = {
+//        NetworkManager().getBeers { beers, error in
+//            return beers?.items
+//        }
+//    }
     var colorScheme: ColorScheme = .light
+    
+    var networkManager = NetworkManager()
     
     @State var presentingBeerAddForm = false
     @State var presentingAbout = false
@@ -48,7 +56,7 @@ struct MainView: View {
                     }
                 }
                 List {
-                    ForEach(beers.items) { item in
+                    ForEach(items) { item in
                         HStack{
                             // FIXME: - Check image downloading
                             UrlImage(withURL: item.beer.label)
@@ -61,7 +69,6 @@ struct MainView: View {
                             }
                         }
                     }
-                    .onDelete(perform: beers.deleteItem)
                 }
                 Button("About") {
                     self.presentingAbout.toggle()
