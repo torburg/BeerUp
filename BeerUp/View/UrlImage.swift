@@ -7,27 +7,25 @@
 //
 
 import Foundation
-import Combine
 import SwiftUI
 
 struct UrlImage: View {
-    @ObservedObject var imageLoader: ImageLoader
-    @State var image: UIImage = UIImage(named: "beer") ?? UIImage(systemName: "photo") ?? UIImage()
     
-    init(withURL url:String) {
+    private var imageLoader: ImageLoader
+    @State var image: UIImage = UIImage()
+    
+    init(withURL url: String) {
         imageLoader = ImageLoader(urlString: url)
     }
 
     var body: some View {
         VStack {
-            Image(uiImage: image)
+            Image(uiImage: (imageLoader.data != nil) ? UIImage(data: imageLoader.data!)! : UIImage(named: "beer")!)
                 .resizable()
                 .frame(width: 50,
                        height: 50,
                        alignment: .center)
                 .clipShape(Circle())
-        }.onReceive(imageLoader.didChange) { data in
-            self.image = UIImage(data: data) ?? UIImage()
         }
     }
 }

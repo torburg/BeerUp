@@ -52,7 +52,6 @@ struct MainView: View {
                         HStack{
                             // FIXME: - Check image downloading
                             UrlImage(withURL: item.beer.label)
-//                            Image("beer")
                             VStack(alignment: .leading) {
                                 Text("\(item.beer.name)").modifier(TextModifier())
                                 Text("\(item.brewery.name)")

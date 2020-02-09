@@ -7,21 +7,18 @@
 //
 
 import Foundation
-import Combine
 
 class ImageLoader: ObservableObject {
-    var didChange = PassthroughSubject<Data, Never>()
-    var data = Data() {
-        didSet {
-            didChange.send(data)
-        }
-    }
-    
-    init(urlString: String) {
-        guard let url = URL(string: urlString) else { return }
+    @Published var data: Data?
+
+    init(urlString: String) { 
+        guard let url = URL(string: urlString) else { print("empty url"); return }
+        print("before task created")
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            guard let data = data else { return }
+            print("task created")
+            guard let data = data else { print("empty publisher data"); return }
             DispatchQueue.main.async {
+                print("dispatch")
                 self.data = data
             }
         }
