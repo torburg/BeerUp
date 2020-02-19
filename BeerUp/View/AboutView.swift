@@ -24,6 +24,7 @@ struct AboutView: View {
             Button("Back") {
                 self.presentationMode.wrappedValue.dismiss()
             }
+            .padding([.bottom], 25)
         }
     }
 }
