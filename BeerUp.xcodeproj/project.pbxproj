@@ -113,7 +113,6 @@
 				887C053E23E9B6A700F6D1F5 /* Controllers */,
 				889218F523DDE9ED007D082B /* Model */,
 				889218F623DF264B007D082B /* View */,
-				889218FD23E0E417007D082B /* BeerList.swift */,
 				889218DC23DDE891007D082B /* AppDelegate.swift */,
 				887C053A23E9A41100F6D1F5 /* AuthDataTorburg.plist */,
 				889218DE23DDE891007D082B /* SceneDelegate.swift */,
@@ -138,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				889218F323DDE9B0007D082B /* Beer.swift */,
+				889218FD23E0E417007D082B /* BeerList.swift */,
 				887C053C23E9B5AC00F6D1F5 /* Brewery.swift */,
 				887C054423EAE79700F6D1F5 /* Item.swift */,
 			);

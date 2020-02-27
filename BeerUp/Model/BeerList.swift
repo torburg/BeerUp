@@ -23,17 +23,19 @@ class BeerList: ObservableObject {
 
     func sortedById() -> [[Item]] {
         var result = [[Item]]()
-        let less10pull = items.filter { $0.beer.id < 10 }
+        let less10pull = items.filter { $0.beer.id < 25 }
         result.append(less10pull)
-        let from10to20pull = items.filter { $0.beer.id >= 10 && $0.beer.id < 20 }
+        let from10to20pull = items.filter { $0.beer.id >= 25 && $0.beer.id < 50 }
         result.append(from10to20pull)
-        let above20pull = items.filter { $0.beer.id >= 20 }
-        result.append(above20pull)
+        let from50to75pull = items.filter { $0.beer.id >= 50 && $0.beer.id < 75 }
+        result.append(from50to75pull)
+        let above75pull = items.filter { $0.beer.id >= 75 }
+        result.append(above75pull)
         return result
     }
 
-    func getBeerStyles(in segment: Int) -> [String] {
-        var styles = [String : Int]()
+    func beerStylesSorted(by segment: Int) -> [(key: Beer.beerStyle, value: Int)] {
+        var styles = [Beer.beerStyle : Int]()
         let beersBySegment = self.sortedById()[segment]
         for item in beersBySegment {
             let styleName = item.beer.style
@@ -45,10 +47,19 @@ class BeerList: ObservableObject {
                 styles[styleName] = 1
             }
         }
-        // Need to sort to display styles in list by their frequency
-        let stylesSorted = styles.sorted { $0.value > $1.value }
-        var result = [String]()
-        for (style, _) in stylesSorted {
+        let stylesSorted = styles
+            .sorted {
+                if ($0.1 == $1.1) {
+                    return $0.0.rawValue.lowercased() < $1.0.rawValue.lowercased()
+                }
+                return $0.1 > $1.1
+            }
+        return stylesSorted
+    }
+
+    func getBeerStyles(in segment: Int) -> [Beer.beerStyle] {
+        var result = [Beer.beerStyle]()
+        for (style, _) in beerStylesSorted(by: segment) {
             result.append(style)
         }
         return result
@@ -57,10 +68,13 @@ class BeerList: ObservableObject {
 
 fileprivate func generateBeers() -> [Item] {
     var items = [Item]()
-    for i in 1...25 {
+    for i in 1...100 {
         items.append(
             Item(firstCheckinId: i,
-                 beer: Beer(id: i - 1, name: "\(i) Guiness", label: "Label \(i)", style: Beer.beerStyles.randomElement()! ),
+                 beer: Beer(id: i - 1,
+                            name: "\(i) Guiness",
+                            label: "Label \(i)",
+                    style: Beer.beerStyle.allCases.randomElement()!),
                  brewery: Brewery(name: "\(i) Brewery")
             )
         )

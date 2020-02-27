@@ -12,25 +12,24 @@ struct Beer: Codable, Identifiable {
     let id: Int
     let name: String
     let label: String
-    let style: String
+    let style: beerStyle
 
     enum CodingKeys: String, CodingKey {
-        case id = "bid"
-        case name = "beer_name"
-        case label = "beer_label"
-        case style = "beer_style"
+        case id     = "bid"
+        case name   = "beer_name"
+        case label  = "beer_label"
+        case style  = "beer_style"
     }
 
-    static let beerStyles = [
-        "American IPA",
-        "Sour - Fruited",
-        "IPA - Sour"
-    ]
-
-}
-extension String: Identifiable {
-    public var id: String {
-        return self
+    // FIXME: We can't store style like enum, we can only fetch it from Untappd, and there can be the new one.
+    enum beerStyle: String, Codable, CaseIterable {
+        case americanIpa = "American IPA"
+        case sourFruited = "Sour - Fruited"
+        case ipaSour     = "IPA - Sour"
+        case hopeIpa     = "Hope - Ipa"
+        case lager       = "Lager"
+        case weisse      = "Weisse"
+        case milkStout   = "Milk Stout"
     }
 }
 

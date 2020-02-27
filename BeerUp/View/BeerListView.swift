@@ -77,7 +77,7 @@ struct BeerListView: View {
                             Text("\(item.brewery.name)")
                                 .font(.subheadline)
                                 .foregroundColor(Color.gray)
-                            Text("\(item.beer.style)")
+                            Text("\(item.beer.style.rawValue)")
                             .font(.subheadline)
                             .foregroundColor(Color.gray)
                         }
